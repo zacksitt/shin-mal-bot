@@ -1,2 +1,9 @@
 2025-08-02T20:37:31: (node:75321) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
+You have triggered an unhandledRejection, you may have forgotten to catch a Promise rejection:
+Error: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/zacksitt/Workspace/Codebase/shin-mal/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at Polling.[Symbol.asyncIterator] (/Users/zacksitt/Workspace/Codebase/shin-mal/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at Polling.loop (/Users/zacksitt/Workspace/Codebase/shin-mal/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at Telegraf.launch (/Users/zacksitt/Workspace/Codebase/shin-mal/node_modules/telegraf/lib/telegraf.js:194:13)

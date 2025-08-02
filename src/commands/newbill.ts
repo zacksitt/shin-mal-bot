@@ -66,7 +66,11 @@ export const handleBillCreation = async (ctx: Context) => {
       case 'totalPeople':
         const peopleCount = parseInt(message);
         if (isNaN(peopleCount) || peopleCount < 1) {
-          ctx.reply('Please enter a valid number of people (minimum 1).');
+          ctx.reply(burmeseMessages.invalidPeopleCount);
+          return;
+        }
+        if (peopleCount > 10) {
+          ctx.reply(burmeseMessages.maxPeopleExceeded);
           return;
         }
         userState.billData.participants = Array.from({ length: peopleCount }, (_, i) => userId + i);
