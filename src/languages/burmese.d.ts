@@ -1,0 +1,42 @@
+export declare const burmeseMessages: {
+    welcome: string;
+    menu: string;
+    help: string;
+    startBillCreation: string;
+    billNameConfirmed: (name: string) => string;
+    peopleCountConfirmed: (count: number) => string;
+    addNamesPrompt: (count: number) => string;
+    namesError: (count: number) => string;
+    singlePayerPrompt: string;
+    multiPayerPrompt: string;
+    namesAddedSingle: (names: string) => string;
+    namesAddedMulti: (names: string) => string;
+    invalidAmount: string;
+    invalidPersonNumber: (max: number) => string;
+    invalidPayment: string;
+    billResults: (title: string, totalAmount: number, perPerson: number) => string;
+    perfectSplit: string;
+    noTransfersNeeded: string;
+    useButtons: string;
+    unableToIdentify: string;
+    errorCreatingBill: string;
+    errorProcessingInput: string;
+    errorSavingBill: string;
+    viewBillsComingSoon: string;
+    calculateSplitComingSoon: string;
+    finishBillButton: string;
+    finishBillPrompt: string;
+    paymentStatus: {
+        overpaid: string;
+        underpaid: string;
+        exact: string;
+    };
+    transferFormat: (fromName: string, toName: string, amount: number) => string;
+    paymentSummary: string;
+    transfersNeeded: string;
+    remainingPayments: string;
+    allPaymentsSummary: string;
+    payToMultiplePeople: string;
+    paidPeopleList: string;
+};
+//# sourceMappingURL=burmese.d.ts.map

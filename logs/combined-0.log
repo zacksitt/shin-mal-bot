@@ -1,0 +1,6 @@
+2025-08-02T20:37:31: [dotenv@17.2.1] injecting env (2) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2025-08-02T20:37:31: [dotenv@17.2.1] injecting env (0) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
+2025-08-02T20:37:31: (node:75321) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-08-02T20:37:31: MongoDB connected
+2025-08-02T20:37:38: Bot started successfully!
