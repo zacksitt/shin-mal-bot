@@ -1,0 +1,31 @@
+{
+  "name": "shin-mal",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx src/bot.ts",
+    "dev": "nodemon --exec tsx src/bot.ts",
+    "build": "tsc",
+    "build:start": "npm run build && node dist/bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "mongoose": "^8.17.0",
+    "mongose": "^0.0.2-security",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^24.1.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}
