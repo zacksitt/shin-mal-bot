@@ -56,6 +56,7 @@ export const handleBillCreation = async (ctx: Context) => {
     const message = ctx.message && 'text' in ctx.message ? ctx.message.text : undefined;
     if (!message) return;
 
+    console.log('Current step:', userState.step, 'Message:', message);
     switch (userState.step) {
       case 'billName':
         userState.billData.title = message;
@@ -65,14 +66,19 @@ export const handleBillCreation = async (ctx: Context) => {
 
       case 'totalPeople':
         const peopleCount = parseInt(message);
+        console.log('People count input:', message, 'Parsed:', peopleCount);
+        
         if (isNaN(peopleCount) || peopleCount < 1) {
+          console.log('Invalid people count - too low or NaN');
           ctx.reply(burmeseMessages.invalidPeopleCount);
           return;
         }
         if (peopleCount > 10) {
+          console.log('Invalid people count - too high:', peopleCount);
           ctx.reply(burmeseMessages.maxPeopleExceeded);
           return;
         }
+        console.log('Valid people count:', peopleCount);
         userState.billData.participants = Array.from({ length: peopleCount }, (_, i) => userId + i);
         userState.step = 'addNames';
         const keyboard = Markup.inlineKeyboard([
